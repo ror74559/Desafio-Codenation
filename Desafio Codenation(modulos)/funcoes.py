@@ -27,9 +27,9 @@ def render1(x):
     print(x)
     print('+'*80)
     print('')
-    print('Decifrar a frase que está na em cifrado de acordo com o número_casas estipulado que indica quantas letras foram puladas para frente para gerar a frase cifrada')
+    print('Decifrar a frase que está na chave cifrado. O número_casas estipulado indica quantas letras foram puladas para frente para gerar a frase cifrada')
     print('')
-    print(['cifrado'])
+    print(x['cifrado'])
     print('-'*80)
     print('')
     
