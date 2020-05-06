@@ -2,10 +2,9 @@ import hashlib
 import requests
 import json
 
-cifra = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t',
+cifra = 'abcdefghijklmnopqrstuvwxyz'
 
-decifra = ['y','z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t',
-'u','v','w','x']
+decifra = 'yzabcdefghijklmnopqrstuvwx'
 
 requisicao = requests.get('https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=ec4148788b49def646d1ab39841b6d8fd91623eb')
 
