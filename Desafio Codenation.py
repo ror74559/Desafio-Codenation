@@ -3,7 +3,6 @@ import requests
 import json
 
 cifra = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t',
-'u','v','w','x','y','z']
 
 decifra = ['y','z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t',
 'u','v','w','x']
@@ -67,5 +66,34 @@ print('')
 print('+'*80)
 
 
+arquivo = open('answer.json', 'w')
+json.dump(desafio, arquivo, indent=4, sort_keys=False)
+arquivo.close()
+
+urlpost = "https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=ec4148788b49def646d1ab39841b6d8fd91623eb"
+file = {"answer": open("answer.json", "rb")}
+resposta = requests.post(urlpost, files=file)
+print(resposta.text)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
