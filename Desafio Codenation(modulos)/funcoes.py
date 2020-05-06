@@ -1,5 +1,5 @@
 
-def decifrando(fraseCifrada,cifra,decifra ):
+def decifrando(fraseCifrada,cifra,decifra, pulo ):
 
       i = 0
       Decifrada = str()
@@ -8,11 +8,14 @@ def decifrando(fraseCifrada,cifra,decifra ):
               
       	if fraseCifrada[i] in cifra:
               
-      		Decifrada = Decifrada + decifra[cifra.index(fraseCifrada[i])]
+              indice = cifra.index(fraseCifrada[i])
+              
+              
+              Decifrada = Decifrada + cifra[indice - pulo]
           
       	else:
-              
-      		Decifrada = Decifrada + fraseCifrada[i]
+
+              Decifrada = Decifrada + fraseCifrada[i]
           
       	i += 1
       return Decifrada

@@ -16,9 +16,11 @@ desafio = json.loads(requisicao.text)
 
 f.render1(desafio)
 
+pulo = desafio['numero_casas']
+
 fraseCifrada = desafio['cifrado']
 	
-fraseDecifrada = f.decifrando(fraseCifrada, cifra, decifra)
+fraseDecifrada = f.decifrando(fraseCifrada, cifra, decifra,pulo)
 
 print(fraseDecifrada)
 
@@ -50,7 +52,9 @@ json.dump(desafio, arquivo, indent=4, sort_keys=False)
 
 arquivo.close()
 
-urlpost = "https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=ec4148788b49def646d1ab39841b6d8fd91623eb"
+token = desafio['token']
+
+urlpost = "https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token="+ token
 
 file = {"answer": open("answer.json", "rb")}
 
